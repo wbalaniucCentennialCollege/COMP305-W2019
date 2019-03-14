@@ -19,4 +19,9 @@ public class Inventory : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    public void ABC()
+    {
+
+    }
 }
