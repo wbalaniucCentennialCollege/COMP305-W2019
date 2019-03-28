@@ -17,9 +17,9 @@ public class GameController : MonoBehaviour
         ui_cherryCounter.UpdateUI(itemCounter, totalItemCount);
     }
 
-    // Update is called once per frame
-    void Update()
+    // Called when an item is picked up
+    public void PickUpItem()
     {
-        
+        ui_cherryCounter.UpdateUI(++itemCounter, totalItemCount);
     }
 }
