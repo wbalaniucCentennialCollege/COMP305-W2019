@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class LevelEndTrigger : MonoBehaviour
 {
-    public GameObject ui_endLevelPanel;
+    private GameController gCont;
+
+    void Start()
+    {
+        gCont = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    }
 
     // Reserved by Unity to detect when an object enters a collider
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {
-            // Show my UI panel
-            ui_endLevelPanel.SetActive(true);
+            // Show my UI panel by calling a GameController method
+            gCont.LevelEnd();
+            
         }
     }
 }

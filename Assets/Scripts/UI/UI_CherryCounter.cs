@@ -8,9 +8,9 @@ public class UI_CherryCounter : MonoBehaviour
     private Text cherryText;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        cherryText = this.GetComponent<Text>();
+        cherryText = GetComponent<Text>();
     }
 
     public void UpdateUI(int qty, int maxItemInLevel)
