@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     // PUBLIC VARIABLES
     public float speed = 10.0f;
     public float jumpForce = 500.0f;
+    public AudioClip[] clips;
 
     // PRIVATE VARIABLES
     private Rigidbody2D rBody;
@@ -14,12 +15,15 @@ public class PlayerController : MonoBehaviour
     private bool isFacingRight = true;
     private bool isGrounded = false;
 
+    private AudioSource audioSrc;
+
     // Reserved function. Runs only once when the object is created.
     // Used for initialization
     void Start()
     {
         rBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        audioSrc = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -36,10 +40,14 @@ public class PlayerController : MonoBehaviour
         float horiz = Input.GetAxis("Horizontal");
 
         // Listens to my space bar key being pressed
+        // JUMPING
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded) 
         {
             rBody.AddForce(new Vector2(0, jumpForce));
             isGrounded = false;
+
+            audioSrc.clip = clips[Random.Range(0, 2)];
+            audioSrc.Play();
         }
 
         rBody.velocity = new Vector2(horiz * speed, rBody.velocity.y);
