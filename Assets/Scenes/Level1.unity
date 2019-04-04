@@ -1234,6 +1234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 966453392}
   - component: {fileID: 966453393}
+  - component: {fileID: 966453394}
   m_Layer: 0
   m_Name: DeathCatcher
   m_TagString: Untagged
@@ -1281,6 +1282,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 18, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &966453394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966453391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2ca9b5f6d12c84ea4604389153dc20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1133830170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,7 +1349,8 @@ AudioSource:
   m_GameObject: {fileID: 1133830170}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243915652135850168, guid: 9e771aee2400e5a43b965feb6bdf2a6b,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: df66f964bb884394888353044e859c8c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -2148,8 +2162,8 @@ MonoBehaviour:
   speed: 10
   jumpForce: 750
   clips:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
+  - {fileID: 8300000, guid: 7e9ee6dc04a5d40d1a5dfc4beb9865e7, type: 3}
 --- !u!95 &1599509298
 Animator:
   serializedVersion: 3
@@ -2192,7 +2206,8 @@ AudioSource:
   m_GameObject: {fileID: 1599509292}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243381186139217598, guid: 9e771aee2400e5a43b965feb6bdf2a6b,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 7e9ee6dc04a5d40d1a5dfc4beb9865e7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
